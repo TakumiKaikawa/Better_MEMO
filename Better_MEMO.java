@@ -28,6 +28,7 @@ public class Better_MEMO extends Application{
         layout.getChildren().add(btn);
 
         Label recordLabel = new Label();
+        layout.getChildren().add(recordLabel);
 
         Memory memory = new Memory();
 
