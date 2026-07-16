@@ -27,8 +27,11 @@ public class Better_MEMO extends Application{
         Button btn = new Button("記録する");
         layout.getChildren().add(btn);
 
+        Memory memory = new Memory();
+
         btn.setOnAction(e ->{
             String record = textfield.getText();
+            memory.save(record);
         });
 
         stage.setScene(scene);
