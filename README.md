@@ -1,3 +1,3 @@
 # Better_MEMO
 
-## This is a simple memo app.
+## java学習のためのシンプルなメモアプリを開発。
