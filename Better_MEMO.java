@@ -23,6 +23,12 @@ public class Better_MEMO extends Application{
             textfield.clear();
         }
 
+    // 全削除メソッド
+        public void MemoClear(){
+            memory.list.clear();
+            recordLabel.setText("");
+        }
+
 
     public static void main(String[] args){
         launch(args);
@@ -51,6 +57,10 @@ public class Better_MEMO extends Application{
         );
 
         textfield.setOnAction(e ->saveMemo());
+
+        Button deleteButton = new Button("削除");
+        layout.getChildren().add(deleteButton);
+        deleteButton.setOnAction(e -> MemoClear());
 
         stage.setScene(scene);
         stage.show();
