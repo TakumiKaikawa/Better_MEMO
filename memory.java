@@ -8,4 +8,3 @@ public class Memory{
     public static void save(String data){
         list.add(data);
     }
-}

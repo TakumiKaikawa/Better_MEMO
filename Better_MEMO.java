@@ -18,6 +18,8 @@ public class Better_MEMO extends Application{
         layout.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(layout,300,600);
+
+        stage.setTitle("Better_MEMO");
         Label titleLabel = new Label("Better_MEMO");
         layout.getChildren().add(titleLabel);
 
