@@ -50,6 +50,8 @@ public class Better_MEMO extends Application{
         btn.setOnAction(e ->saveMemo()
         );
 
+        textfield.setOnAction(e ->saveMemo());
+
         stage.setScene(scene);
         stage.show();
     }
