@@ -9,6 +9,21 @@ import javafx.scene.control.TextField;
 
 
 public class Better_MEMO extends Application{
+    Memory memory = new Memory();
+    TextField textfield = new TextField();
+    Label recordLabel = new Label();
+
+    // setOnActionの中の処理
+        public void saveMemo(){
+        String record = textfield.getText();
+            memory.save(record);
+
+            recordLabel.setText(String.join("\n",memory.list));
+
+            textfield.clear();
+        }
+
+
     public static void main(String[] args){
         launch(args);
     }
@@ -23,25 +38,17 @@ public class Better_MEMO extends Application{
         Label titleLabel = new Label("Better_MEMO");
         layout.getChildren().add(titleLabel);
 
-        TextField textfield = new TextField();
         layout.getChildren().add(textfield);
 
         Button btn = new Button("記録する");
         layout.getChildren().add(btn);
 
-        Label recordLabel = new Label();
         layout.getChildren().add(recordLabel);
 
-        Memory memory = new Memory();
 
-        btn.setOnAction(e ->{
-            String record = textfield.getText();
-            memory.save(record);
 
-            recordLabel.setText(String.join("\n",memory.list));
-
-            textfield.clear();
-        });
+        btn.setOnAction(e ->saveMemo()
+        );
 
         stage.setScene(scene);
         stage.show();
