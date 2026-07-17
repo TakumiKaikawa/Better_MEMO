@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.geometry.Insets;
 
 
 public class Better_MEMO extends Application{
@@ -37,6 +38,9 @@ public class Better_MEMO extends Application{
     public void start(Stage stage){
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
+
+        //TextFieldの余白
+        layout.setPadding(new Insets(20));
 
         Scene scene = new Scene(layout,300,600);
 
